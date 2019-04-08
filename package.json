@@ -6,10 +6,16 @@
   "scripts": {
     "build:client": "cd client && npm run build",
     "build:api": "cd api && npm run build",
-    "build": "npm-run-all build:*",
+    "build": "run-p build:*",
     "start:client": "cd client && npm start",
     "start:api": "cd api && npm start:prod",
-    "start": "npm-run-all start:*"
+    "start": "run-p start:*",
+    "dev:client": "cd client && npm run dev",
+    "dev:api": "cd api && npm run start:dev",
+    "dev": "run-p dev:*",
+    "install:client": "cd client && yarn install",
+    "install:api": "cd api && yarn install",
+    "install:all": "run-p install:*"
   },
   "dependencies": {
     "npm-run-all": "^4.1.5"

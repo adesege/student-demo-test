@@ -1,68 +1,52 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        client
-      </h1>
-      <h2 class="subtitle">
-        My amazing Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
+  <section id="student-list">
+    <div class="card add-student-card" @click.prevent="goTo('/add')" style="width: 18rem;">
+      <img src="/add-icon.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center">Add a student</h5>
       </div>
     </div>
+    <student-card :key="student.id" v-for="student in students" :option="student"/>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import { mapGetters } from 'vuex';
+import StudentCard from '../components/StudentCard.vue';
+import routerMixin from '../mixins/router.mixin';
 
 export default {
   components: {
-    Logo
-  }
-}
+    StudentCard,
+  },
+  mixins: [routerMixin],
+  async fetch(context) {
+    await context.store.dispatch('student/getStudents');
+  },
+  computed: {
+    ...mapGetters({
+      students: 'student/students',
+    }),
+  },
+};
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style lang="scss" scoped>
+#student-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-row-gap: 1.5rem;
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  .card {
+    justify-self: center;
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  .add-student-card {
+    cursor: pointer;
 
-.links {
-  padding-top: 15px;
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
 }
 </style>
