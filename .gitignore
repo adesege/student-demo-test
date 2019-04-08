@@ -82,3 +82,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+./api/dist
+./client/.nuxt
+client/static/sw.js

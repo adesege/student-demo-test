@@ -21,10 +21,24 @@
   },
   "dependencies": {
     "@nestjs/common": "^5.4.0",
-    "@nestjs/core": "^5.4.0", 
+    "@nestjs/core": "^5.4.0",
+    "@nestjs/swagger": "^3.0.2",
+    "@nestjs/typeorm": "^5.3.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/joi": "^14.3.2",
+    "class-transformer": "^0.2.0",
+    "class-validator": "^0.9.1",
+    "cloudinary": "^1.14.0",
+    "dotenv": "^7.0.0",
+    "joi": "^14.3.1",
+    "pg": "^7.9.0",
+    "pg-hstore": "^2.3.2",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.2.2",
+    "swagger-ui-express": "^4.0.2",
+    "tslint-consistent-codestyle": "1.15.0",
+    "typeorm": "^0.3.0-alpha.23",
     "typescript": "^3.0.1"
   },
   "devDependencies": {
@@ -33,7 +47,7 @@
     "@types/jest": "^23.3.1",
     "@types/node": "^10.7.1",
     "@types/supertest": "^2.0.5",
-    "jest": "^23.5.0",
+    "jest": "^24.7.1",
     "nodemon": "^1.18.3",
     "prettier": "^1.14.2",
     "supertest": "^3.1.0",
@@ -41,10 +55,14 @@
     "ts-loader": "^4.4.2",
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.5.0",
-    "tslint": "5.11.0"
+    "tslint": "^5.15.0"
   },
   "jest": {
-    "moduleFileExtensions": ["js", "json", "ts"],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
     "rootDir": "src",
     "testRegex": ".spec.ts$",
     "transform": {
