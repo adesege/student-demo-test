@@ -1,0 +1,61 @@
+#student-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-row-gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+#student-list .card {
+  justify-self: center;
+}
+
+#student-list .add-student-card {
+  cursor: pointer;
+}
+
+#student-list:hover {
+  background-color: #f7f7f7;
+}
+
+.student-card .card-text {
+  padding: 0;
+  list-style-type: none;
+}
+
+.student-card .card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.student-card .card-img-top {
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.avatar-input {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  left: -1000000px;
+}
+
+.avatar-container {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin: auto;
+  cursor: pointer;
+  padding: 0;
+}
+
+.avatar-container .avatar-preview {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.25rem;
+}
+

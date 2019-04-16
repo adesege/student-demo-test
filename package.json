@@ -1,23 +1,23 @@
 {
-  "name": "student-demo-test",
+  "name": "mesaic-test",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/adesege/student-demo-test.git",
+  "author": "Fadojutimi Temitayo Olusegun <Fadojutimitemitayo@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build:client": "cd client && npm run build",
-    "build:api": "cd api && npm run build",
-    "build": "run-p build:*",
-    "start:client": "cd client && npm start",
-    "start:api": "cd api && npm start:prod",
-    "start": "run-p start:*",
-    "dev:client": "cd client && npm run dev",
-    "dev:api": "cd api && npm run start:dev",
-    "dev": "run-p dev:*",
-    "install:client": "cd client && yarn install",
-    "install:api": "cd api && yarn install",
-    "install:all": "run-p install:*"
+    "dev": "nodemon --exec babel-node ./api/server.js"
   },
   "dependencies": {
-    "npm-run-all": "^4.1.5"
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.11"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.1"
   }
 }
