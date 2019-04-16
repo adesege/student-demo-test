@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Student Demo Test</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/custom.css" />
+</head>
+
+<body>
+  <div class="container">
+    <section id="main-heading">
+      <h1>Student Demo Test</h1>
+      <h3>Add, edit and delete students</h3>
+    </section>
+
+    <form onsubmit="onSubmit(this)" novalidate>
+      <div class="d-flex w-50 m-auto align-items-center">
+        <input onchange="processPhoto(this)" type="file" class="form-control avatar-input" id="photo" accept="image/*">
+        <label for="photo" class="avatar-container mb-3">
+          <div class="avatar-preview"></div>
+        </label>
+        <span class="invalid-feedback flex-1 text-center">Please choose a photo</span>
+      </div>
+      <div class="form-row mb-3">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name" required>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <div class="form-group">
+            <label for="birthDate">Birth Date</label>
+            <input type="text" id="birthDate" class="form-control" placeholder="DD-MM-YYY" required>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="hobbies">Hobbies</label>
+            <select multiple class="form-control" id="hobbies" required>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex">
+        <button type="submit" class="btn btn-success btn-block">Submit</button>
+      </div>
+    </form>
+
+    <section id="student-list">
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

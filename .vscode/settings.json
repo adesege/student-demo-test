@@ -15,7 +15,7 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-
-  "tslint.ignoreDefinitionFiles": true,
-  "typescript.tsdk": "./api/node_modules/typescript/lib"
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
